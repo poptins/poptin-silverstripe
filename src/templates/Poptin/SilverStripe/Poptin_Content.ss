@@ -32,7 +32,7 @@
                 <div class="tinyborder"></div>
                 <span class="everythinglooks"><strong>Poptin is installed on your website</strong><br>Click on the button below to<br>create and manage your poptins</span>
                 <img src="$resourceURL('poptin/silverstripe:client/dist/images/vicon.png')"/>
-                <a href="gotodashboardlink" target="_blank"
+                <a href="/admin/poptin/redirectToDashboard" target="_blank"
                 class="ppcontrolpanel goto_dashboard_button_pp_updatable">Go to Dashboard</a>
                 <a href="#logout" class="pplogout">Deactivate Poptin</a>
             </div>
@@ -44,7 +44,7 @@
         <% if $poptinidcheck %>
             <div class="ppaccountmanager" style="display:none">
         <% else %>
-            <div class="display:block">
+            <div class="ppaccountmanager" class="display:block">
         <% end_if %>
             <div class="popotinRegister">
                 <!-- Here will render register view -->
@@ -67,6 +67,7 @@
                             <input type="hidden" name="register" class="poptin_input" value="true"/>
                             <input type="hidden" name="security" class="poptin_input"
                                 value="poptin-fe-register"/>
+                            <input type="hidden" name="marketplace" class="poptin_input" value="slvrstrp"/>
                             <div class="bottomForm">
                                 <input class="ppSubmit pp_signup_btn poptin_signup_button" type="submit"
                                     value="Sign Up"/>
@@ -279,7 +280,7 @@
     </div>
 
     <!-- Just Making Sure Modal -->
-    <div id="makingsure" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
+    <div id="makingsure" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; z-index:9999;">
         <div class="modal-dialog poptin-lightbox-general">
             <img class="poptin-parrot-makingsure-image"
                 src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-making-sure.png')"/>

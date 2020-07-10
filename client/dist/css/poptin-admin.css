@@ -594,7 +594,7 @@ a.pplogout:focus {
     display: none;
     left:0px;
     right:0px;
-    background-image: url(../images/ajax-loader.gif);
+    background-image: url(/_resources/vendor/poptin/silverstripe/client/dist/images/ajax-loader.gif);
     background-repeat: no-repeat;
     background-position: center;
 }

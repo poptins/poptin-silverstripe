@@ -22,18 +22,30 @@ jQuery(document).ready(function ($) {
         } else {
             show_loader();
             jQuery.ajax({
-                url: ajaxurl,
+                url: 'https://dev.popt.in/api/marketplace/register',
                 dataType: "JSON",
                 method: "POST",
                 data: jQuery("#registration_form").serialize(),
                 success: function (data) {
-                    hide_loader();
+                    jQuery.ajax({
+                        url: '/admin/poptin/setConfig',
+                        dataType: "JSON",
+                        method: "POST",
+                        data: {
+                            user_id: data.user_id,
+                            client_id: data.client_id,
+                            token: data.token
+                        },
+                        async: false,
+                        success: function (data) {
+                            //
+                        }
+                    });
+
                     if (data.success == true) {
                         jQuery(".ppaccountmanager").fadeOut(300);
                         jQuery(".poptinLogged").fadeIn(300);
                         jQuery(".poptinLoggedBg").fadeIn(300);
-                        $(".goto_dashboard_button_pp_updatable").attr('href',"admin.php?page=Poptin&poptin_logmein=true&after_registration=wordpress");
-                        // window.open("admin.php?page=Poptin&poptin_logmein=true&after_registration=wordpress","_blank");
                     } else {
                         if(data.message === "Registration failed. User already registered.") {
                             jQuery("#lookfamiliar").modal();
@@ -43,40 +55,55 @@ jQuery(document).ready(function ($) {
                             swal("Error", data.message, "error");
                         }
                     }
+                    hide_loader();
                 }
             });
         }
     });
 
-    jQuery('.goto_dashboard_button_pp_updatable').click(function(){
-        link = $(this);
-        href = link.attr('href');
-        setTimeout(function(){
-            link.attr('href',href.replace('&after_registration=wordpress',''));
-        },1000);
-    });
-
-    jQuery(document).on('click','.deactivate-poptin-confirm-yes',function(){
-        jQuery.post(ajaxurl,{
-            action: 'delete-id'
-            }, function (status) {
-                status = JSON.parse(status);
-                if (status.success == true) {
-                    jQuery('#makingsure').modal('hide');
-                    jQuery('#byebyeModal').modal('show');
+    $(document).on('click','.deactivate-poptin-confirm-yes',function(){
+        show_loader();
+        $.ajax({
+            'url': '/admin/poptin/deleteConfig',
+            'type': 'POST',
+            success: function (data) {
+                data = JSON.parse(data);
+                console.log(data.success);
+                if (data.success) {
+                    $('#makingsure').modal('hide');
+                    $('#byebyeModal').modal('show');
                     $(".poptinLogged").hide();
                     $(".poptinLoggedBg").hide();
                     $(".ppaccountmanager").fadeIn('slow');
                     $(".popotinLogin").show();
                     $(".popotinRegister").hide();
+                    hide_loader();
                 }
             }
-        );
+        });
     });
 
     jQuery(".pplogout").click(function (e) {
         e.preventDefault();
-        jQuery('#makingsure').modal('show');
+        // jQuery('#makingsure').modal('show'); // Need to activate this later
+        show_loader();
+        $.ajax({
+            'url': '/admin/poptin/deleteConfig',
+            'type': 'POST',
+            success: function (data) {
+                data = JSON.parse(data);
+                if (data.success) {
+                    $('#makingsure').modal('hide');
+                    $('#byebyeModal').modal('show');
+                    $(".poptinLogged").hide();
+                    $(".poptinLoggedBg").hide();
+                    $(".ppaccountmanager").fadeIn('slow');
+                    $(".popotinLogin").show();
+                    $(".popotinRegister").hide();
+                    hide_loader();
+                }
+            }
+        });
     });
 
     $(".ppLogin").click(function (e) {
@@ -99,12 +126,15 @@ jQuery(document).ready(function ($) {
             $("#oopsiewrongid").modal('show');
             return false;
         } else {
-            $.post(ajaxurl, {
-                    data: {'poptin_id': id},
-                    action: 'add-id',
-                }, function (status) {
-                    status = JSON.parse(status);
-                    if (status.success == true) {
+            $.ajax({
+                'url': '/admin/poptin/setConfig',
+                'type': 'POST',
+                'data': {
+                    'client_id': id
+                },
+                dataType: 'json',
+                success: function (data) {
+                    if (data.success == true) {
                         jQuery(".poptinLogged").fadeIn('slow');
                         jQuery(".poptinLoggedBg").fadeIn('slow');
                         jQuery(".ppaccountmanager").hide();
@@ -113,7 +143,7 @@ jQuery(document).ready(function ($) {
                         $(".goto_dashboard_button_pp_updatable").attr('href',"https://app.popt.in/login");
                     }
                 }
-            );
+            });
         }
     });
 

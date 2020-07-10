@@ -1,0 +1,9 @@
+PageController:
+    extensions:
+        - Poptin\Silverstripe\PoptinExtension
+Silverstripe\SiteConfig\SiteConfig:
+    extensions:
+        - \Poptin\SilverStripe\PoptinSiteConfig
+SilverStripe\Admin\LeftAndMain:
+    extra_requirements_css:
+        - '_resources/vendor/poptin/silverstripe/client/dist/css/menu-icon.css'
