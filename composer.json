@@ -18,8 +18,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Poptin\\SilverStripe\\": "src/",
-            "Poptin\\SilverStripe\\Tests\\": "tests/"
+            "Poptin\\Silverstripe\\": "src/",
+            "Poptin\\Silverstripe\\Tests\\": "tests/"
         }
     },
     "extra": {
