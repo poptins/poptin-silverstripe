@@ -61,7 +61,7 @@
                             method="POST">
 
                             <input class="poptin_input" type="text" id="email" name="email" placeholder="Enter your email"
-                                value="admin_email_here"
+                                value="$currentUserEmail"
                                 placeholder="example@poptin.com"/>
                             <input type="hidden" name="action" class="poptin_input" value="poptin_register"/>
                             <input type="hidden" name="register" class="poptin_input" value="true"/>

@@ -5,6 +5,7 @@ use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\View\Requirements;
 use Silverstripe\SiteConfig\SiteConfig;
 use SilverStripe\Control\HTTPRequest;
+use SilverStripe\Security\Security;
 
 class Poptin extends LeftAndMain
 {
@@ -24,6 +25,11 @@ class Poptin extends LeftAndMain
 
     public function csrf_token() {
         return hash('sha512', 'poptin-fe-login');
+    }
+
+    public function currentUserEmail() {
+        $member = Security::getCurrentUser();
+        return $member->Email;
     }
 
     public function poptinidcheck() {
