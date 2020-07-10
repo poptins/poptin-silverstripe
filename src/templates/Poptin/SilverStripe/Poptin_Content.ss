@@ -26,7 +26,7 @@
                     <input type="hidden" name="action" value="poptin_logmein" class="poptin_input"/>
                     <input type="hidden" name="logmein" value="true" class="poptin_input"/>
                     <input type="hidden" name="security" class="poptin_input"
-                        value="poptin-fe-register"/>
+                        value="$csrf_token"/>
                 </form>
                 <h2 class="loggedintitle">You're All Set!</h2>
                 <div class="tinyborder"></div>
@@ -66,7 +66,7 @@
                             <input type="hidden" name="action" class="poptin_input" value="poptin_register"/>
                             <input type="hidden" name="register" class="poptin_input" value="true"/>
                             <input type="hidden" name="security" class="poptin_input"
-                                value="poptin-fe-register"/>
+                                value="$csrf_token"/>
                             <input type="hidden" name="marketplace" class="poptin_input" value="slvrstrp"/>
                             <div class="bottomForm">
                                 <input class="ppSubmit pp_signup_btn poptin_signup_button" type="submit"

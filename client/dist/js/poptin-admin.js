@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
         } else {
             show_loader();
             jQuery.ajax({
-                url: 'https://dev.popt.in/api/marketplace/register',
+                url: 'http://poptin_v3.test/api/marketplace/register',
                 dataType: "JSON",
                 method: "POST",
                 data: jQuery("#registration_form").serialize(),
@@ -140,7 +140,6 @@ jQuery(document).ready(function ($) {
                         jQuery(".ppaccountmanager").hide();
                         jQuery(".popotinLogin").hide();
                         jQuery(".popotinRegister").hide();
-                        $(".goto_dashboard_button_pp_updatable").attr('href',"https://app.popt.in/login");
                     }
                 }
             });

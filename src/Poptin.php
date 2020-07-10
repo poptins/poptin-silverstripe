@@ -6,8 +6,6 @@ use SilverStripe\View\Requirements;
 use Silverstripe\SiteConfig\SiteConfig;
 use SilverStripe\Control\HTTPRequest;
 
-use GuzzleHttp\Client as Guzzle;
-
 class Poptin extends LeftAndMain
 {
     private static $allowed_actions = array ('setConfig', 'deleteConfig', 'redirectToDashboard');
@@ -24,9 +22,8 @@ class Poptin extends LeftAndMain
         Requirements::javascript('poptin/silverstripe:client/dist/js/poptin-admin.js');
     }
 
-    protected function addCMSRequirements()
-    {
-        Requirements::javascript('silverstripe/blog:client/dist/styles/test.js');
+    public function csrf_token() {
+        return hash('sha512', 'poptin-fe-login');
     }
 
     public function poptinidcheck() {
@@ -84,17 +81,16 @@ class Poptin extends LeftAndMain
     {
         $config = SiteConfig::current_site_config();
         
-        $poptinConfig = json_decode($config->PoptinConfig);
-
-        $client = new \GuzzleHttp\Client();
+        $poptinConfig = json_decode($config->PoptinConfig, true);
 
         $body = [
             "user_id" => $poptinConfig['user_id'],
             "token" => $poptinConfig['token'],
         ];
 
+        $client = new \GuzzleHttp\Client();
         try {
-            $response = $client->request("POST", 'https://dev.popt.in/api/marketplace/auth', [
+            $response = $client->request("POST", 'http://poptin_v3.test/api/marketplace/auth', [
                 "form_params" => ($body)
             ]);
 
@@ -102,7 +98,7 @@ class Poptin extends LeftAndMain
                 return $this->redirect(json_decode($response->getBody()->getContents())->login_url . '&utm_source=silverstripe');
             }
         }catch (\Exception $e) {
-            return $this->redirect('https://dev.popt.in');
+            return $this->redirect('http://poptin_v3.test');
         }
     }
 }
