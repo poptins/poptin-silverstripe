@@ -1,2 +1,6 @@
-node_modules
-vendor
+/silverstripe-cache/
+/.env
+/vendor/
+/themes/simple/
+/_resources/
+/public/_resources/
