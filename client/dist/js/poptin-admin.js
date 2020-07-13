@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
         } else {
             show_loader();
             jQuery.ajax({
-                url: 'http://poptin_v3.test/api/marketplace/register',
+                url: 'https://app.popt.in/api/marketplace/register',
                 dataType: "JSON",
                 method: "POST",
                 data: jQuery("#registration_form").serialize(),

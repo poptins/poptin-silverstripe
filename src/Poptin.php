@@ -96,7 +96,7 @@ class Poptin extends LeftAndMain
 
         $client = new \GuzzleHttp\Client();
         try {
-            $response = $client->request("POST", 'http://poptin_v3.test/api/marketplace/auth', [
+            $response = $client->request("POST", 'https://app.popt.in/api/marketplace/auth', [
                 "form_params" => ($body)
             ]);
 
@@ -104,7 +104,7 @@ class Poptin extends LeftAndMain
                 return $this->redirect(json_decode($response->getBody()->getContents())->login_url . '&utm_source=silverstripe');
             }
         }catch (\Exception $e) {
-            return $this->redirect('http://poptin_v3.test');
+            return $this->redirect('https://app.popt.in');
         }
     }
 }
