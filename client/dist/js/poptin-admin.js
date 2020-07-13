@@ -85,25 +85,7 @@ jQuery(document).ready(function ($) {
 
     jQuery(".pplogout").click(function (e) {
         e.preventDefault();
-        // jQuery('#makingsure').modal('show'); // Need to activate this later
-        show_loader();
-        $.ajax({
-            'url': '/admin/poptin/deleteConfig',
-            'type': 'POST',
-            success: function (data) {
-                data = JSON.parse(data);
-                if (data.success) {
-                    $('#makingsure').modal('hide');
-                    $('#byebyeModal').modal('show');
-                    $(".poptinLogged").hide();
-                    $(".poptinLoggedBg").hide();
-                    $(".ppaccountmanager").fadeIn('slow');
-                    $(".popotinLogin").show();
-                    $(".popotinRegister").hide();
-                    hide_loader();
-                }
-            }
-        });
+        jQuery('#makingsure').modal('show');
     });
 
     $(".ppLogin").click(function (e) {

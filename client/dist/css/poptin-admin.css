@@ -846,3 +846,8 @@ body *.admin-poptin-box {
     display:block !important;
     margin: 5px 0 15px 20px !important;
 }
+
+.modal-dialog.poptin-lightbox .modal-content {
+    box-shadow: none;
+    border: 0px;
+}

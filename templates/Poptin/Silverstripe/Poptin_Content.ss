@@ -228,37 +228,39 @@
     <!-- Modal -->
     <div id="whereIsMyId" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
         <div class="modal-dialog poptin-lightbox">
-            <div class="poptin-lightbox-header">Where is my user ID?</div>
-            <div class="poptin-where-my-id-wrapper">
-                <div class="poptin-where-my-id-01">
-                    <div class="poptin-where-my-id">
-                        <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-01.png')"/>
+            <div class="modal-content">
+                <div class="poptin-lightbox-header">Where is my user ID?</div>
+                <div class="poptin-where-my-id-wrapper">
+                    <div class="poptin-where-my-id-01">
+                        <div class="poptin-where-my-id">
+                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-01.png')"/>
+                        </div>
+                        <div class="poptin-where-my-id-smalltext">
+                            <b>1.</b>&nbsp;Go to your dashboard, in the top bar click on "Installation Code"
+                        </div>
                     </div>
-                    <div class="poptin-where-my-id-smalltext">
-                        <b>1.</b>&nbsp;Go to your dashboard, in the top bar click on "Installation Code"
+                    <div class="poptin-where-my-id-02">
+                        <div class="poptin-where-my-id">
+                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-02.png')"/>
+                        </div>
+                        <div class="poptin-where-my-id-smalltext">
+                            <b>2.</b>&nbsp;Click on Wordpress
+                        </div>
                     </div>
-                </div>
-                <div class="poptin-where-my-id-02">
-                    <div class="poptin-where-my-id">
-                        <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-02.png')"/>
+                    <div class="poptin-where-my-id-03">
+                        <div class="poptin-where-my-id">
+                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-03.png')"/>
+                        </div>
+                        <div class="poptin-where-my-id-smalltext">
+                            <b>3.</b>&nbsp;Copy your user ID
+                        </div>
                     </div>
-                    <div class="poptin-where-my-id-smalltext">
-                        <b>2.</b>&nbsp;Click on Wordpress
-                    </div>
-                </div>
-                <div class="poptin-where-my-id-03">
-                    <div class="poptin-where-my-id">
-                        <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-03.png')"/>
-                    </div>
-                    <div class="poptin-where-my-id-smalltext">
-                        <b>3.</b>&nbsp;Copy your user ID
-                    </div>
+                    <div class="clearfix"></div>
                 </div>
                 <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="poptin-lightbox-button-wrapper text-align-right">
-                <div class="poptin-lightbox-button" data-dismiss="modal">Close</div>
+                <div class="poptin-lightbox-button-wrapper text-align-right">
+                    <div class="poptin-lightbox-button" data-dismiss="modal">Close</div>
+                </div>
             </div>
         </div>
     </div>
@@ -266,32 +268,36 @@
     <!-- BYE BYE Modal -->
     <div id="byebyeModal" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
         <div class="modal-dialog poptin-lightbox-general">
-            <img class="poptin-parrot-byebye-image" src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-bye-bye.png')"/>
-            <div class="poptin-lightbox-header-general">Bye Bye</div>
-            <div class="poptin-lightbox-textcontent-general">
-                Poptin snippet has been
-                removed. See you around.
-            </div>
-            <div class="clearfix"></div>
-            <div class="poptin-lightbox-button-wrapper text-align-center">
-                <div class="poptin-lightbox-button" data-dismiss="modal">Close</div>
+            <div class="modal-content">
+                <img class="poptin-parrot-byebye-image" src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-bye-bye.png')"/>
+                <div class="poptin-lightbox-header-general">Bye Bye</div>
+                <div class="poptin-lightbox-textcontent-general">
+                    Poptin snippet has been
+                    removed. See you around.
+                </div>
+                <div class="clearfix"></div>
+                <div class="poptin-lightbox-button-wrapper text-align-center">
+                    <div class="poptin-lightbox-button" data-dismiss="modal">Close</div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Just Making Sure Modal -->
-    <div id="makingsure" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; z-index:9999;">
+    <div id="makingsure" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
         <div class="modal-dialog poptin-lightbox-general">
-            <img class="poptin-parrot-makingsure-image"
-                src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-making-sure.png')"/>
-            <div class="poptin-lightbox-header-general">Just making sure</div>
-            <div class="poptin-lightbox-textcontent-general">
-                Are you sure you want to<br/> remove Poptin?
-            </div>
-            <div class="clearfix"></div>
-            <div class="poptin-lightbox-button-wrapper text-align-center">
-                <div class="poptin-lightbox-button deactivate-poptin-confirm-yes">Yes</div>
-                <div class="poptin-lightbox-atag" data-dismiss="modal">I'll stay</div>
+            <div class="modal-content">
+                <img class="poptin-parrot-makingsure-image"
+                    src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-making-sure.png')"/>
+                <div class="poptin-lightbox-header-general">Just making sure</div>
+                <div class="poptin-lightbox-textcontent-general">
+                    Are you sure you want to<br/> remove Poptin?
+                </div>
+                <div class="clearfix"></div>
+                <div class="poptin-lightbox-button-wrapper text-align-center">
+                    <div class="poptin-lightbox-button deactivate-poptin-confirm-yes">Yes</div>
+                    <div class="poptin-lightbox-atag" data-dismiss="modal">I'll stay</div>
+                </div>
             </div>
         </div>
     </div>
@@ -299,16 +305,18 @@
     <!-- Just Making Sure Modal -->
     <div id="lookfamiliar" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
         <div class="modal-dialog poptin-lightbox-general">
-            <img class="poptin-parrot-familiar-image"
-                src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-familiar.png')"/>
-            <div class="poptin-lightbox-header-general">You look familiar</div>
-            <div class="poptin-lightbox-textcontent-general">
-                You already have a Poptin<br/> account with this email address.
-            </div>
-            <div class="clearfix"></div>
-            <div class="poptin-lightbox-button-wrapper text-align-center">
-                <a class="poptin-lightbox-button login-from-lb" target="_blank" href="https://app.popt.in/login">Login</a>
-                <div class="poptin-lightbox-atag" data-dismiss="modal">Cancel</div>
+            <div class="modal-content">
+                <img class="poptin-parrot-familiar-image"
+                    src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-familiar.png')"/>
+                <div class="poptin-lightbox-header-general">You look familiar</div>
+                <div class="poptin-lightbox-textcontent-general">
+                    You already have a Poptin<br/> account with this email address.
+                </div>
+                <div class="clearfix"></div>
+                <div class="poptin-lightbox-button-wrapper text-align-center">
+                    <a class="poptin-lightbox-button login-from-lb" target="_blank" href="https://app.popt.in/login">Login</a>
+                    <div class="poptin-lightbox-atag" data-dismiss="modal">Cancel</div>
+                </div>
             </div>
         </div>
     </div>
@@ -317,14 +325,16 @@
     <!-- Wrong Email ID Modal -->
     <div id="oopsiewrongemailid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
         <div class="modal-dialog poptin-lightbox-general">
-            <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
-            <div class="poptin-lightbox-header-general">Oopsie... wrong Email</div>
-            <div class="poptin-lightbox-textcontent-general">
-                Please enter a valid Email Address.
-            </div>
-            <div class="clearfix"></div>
-            <div class="poptin-lightbox-button-wrapper text-align-center">
-                <div class="poptin-lightbox-button" data-dismiss="modal">Try again</div>
+            <div class="modal-content">
+                <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
+                <div class="poptin-lightbox-header-general">Oopsie... wrong Email</div>
+                <div class="poptin-lightbox-textcontent-general">
+                    Please enter a valid Email Address.
+                </div>
+                <div class="clearfix"></div>
+                <div class="poptin-lightbox-button-wrapper text-align-center">
+                    <div class="poptin-lightbox-button" data-dismiss="modal">Try again</div>
+                </div>
             </div>
         </div>
     </div>
@@ -332,14 +342,16 @@
     <!-- Just Making Sure Modal -->
     <div id="oopsiewrongid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
         <div class="modal-dialog poptin-lightbox-general">
-            <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
-            <div class="poptin-lightbox-header-general">Oopsie... wrong ID</div>
-            <div class="poptin-lightbox-textcontent-general">
-                <a href="#" class="poptin-lightbox-atag where-is-my-id-inside-lb">Where is my user ID?</a>
-            </div>
-            <div class="clearfix"></div>
-            <div class="poptin-lightbox-button-wrapper text-align-center">
-                <div class="poptin-lightbox-button" data-dismiss="modal">Try again</div>
+            <div class="modal-content">
+                <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
+                <div class="poptin-lightbox-header-general">Oopsie... wrong ID</div>
+                <div class="poptin-lightbox-textcontent-general">
+                    <a href="#" class="poptin-lightbox-atag where-is-my-id-inside-lb">Where is my user ID?</a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="poptin-lightbox-button-wrapper text-align-center">
+                    <div class="poptin-lightbox-button" data-dismiss="modal">Try again</div>
+                </div>
             </div>
         </div>
     </div>
