@@ -16,5 +16,6 @@ class PoptinSiteConfig extends DataExtension
         $fields->addFieldToTab("Root.Main", 
             new TextField("PoptinConfig", "Poptin Config")
         );
+        $fields->removeByName(['PoptinConfig']);
     }
 }
