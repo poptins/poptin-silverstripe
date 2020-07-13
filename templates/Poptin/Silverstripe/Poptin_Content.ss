@@ -266,7 +266,7 @@
     </div>
 
     <!-- BYE BYE Modal -->
-    <div id="byebyeModal" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
+    <div id="byebyeModal" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
                 <img class="poptin-parrot-byebye-image" src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-bye-bye.png')"/>
@@ -284,7 +284,7 @@
     </div>
 
     <!-- Just Making Sure Modal -->
-    <div id="makingsure" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
+    <div id="makingsure" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
                 <img class="poptin-parrot-makingsure-image"
@@ -303,7 +303,7 @@
     </div>
 
     <!-- Just Making Sure Modal -->
-    <div id="lookfamiliar" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
+    <div id="lookfamiliar" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
                 <img class="poptin-parrot-familiar-image"
@@ -323,7 +323,7 @@
 
 
     <!-- Wrong Email ID Modal -->
-    <div id="oopsiewrongemailid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
+    <div id="oopsiewrongemailid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
                 <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
@@ -340,7 +340,7 @@
     </div>
 
     <!-- Just Making Sure Modal -->
-    <div id="oopsiewrongid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr;">
+    <div id="oopsiewrongid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
                 <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
