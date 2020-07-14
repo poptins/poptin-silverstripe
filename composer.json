@@ -3,6 +3,9 @@
     "description": "SilverStripe Pop ups, Exit Intent Popup, Email Pop Up, Inline Contact Form Builder - Poptin",
     "type": "silverstripe-vendormodule",
     "keywords": [
+        "poptin",
+        "silverstripe",
+        "silverstripe-popups-forms",
         "pop ups",
         "pop up",
         "popups",
