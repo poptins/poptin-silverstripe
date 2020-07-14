@@ -1,11 +1,25 @@
 {
     "name": "poptin/silverstripe",
-    "description": "A skeleton for SilverStripe modules.",
+    "description": "SilverStripe Pop ups, Exit Intent Popup, Email Pop Up, Inline Contact Form Builder - Poptin",
     "type": "silverstripe-vendormodule",
     "keywords": [
-        "silverstripe",
-        "CMS"
+        "pop ups",
+        "pop up",
+        "popups",
+        "pop up",
+        "exit intent",
+        "exit intent popup",
+        "exit intent technology",
+        "email popups",
+        "exit pop up",
+        "video popup",
+        "forms",
+        "form",
+        "contact forms",
+        "inline forms",
+        "embedded forms"
     ],
+    "homepage": "https://www.poptin.com/",
     "license": "BSD-3-Clause",
     "require": {
         "silverstripe/framework": "^4.0",
