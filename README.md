@@ -2,7 +2,7 @@
 
 # Install
 Install using composer:
-`composer require poptin/silverstripe`
+`composer require poptin/silverstripe-popups-forms`
 
 Run build:
 `yourdomain/dev/build/?flush`

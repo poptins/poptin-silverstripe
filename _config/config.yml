@@ -3,7 +3,7 @@ PageController:
         - Poptin\Silverstripe\PoptinExtension
 Silverstripe\SiteConfig\SiteConfig:
     extensions:
-        - \Poptin\SilverStripe\PoptinSiteConfig
+        - \Poptin\Silverstripe\PoptinSiteConfig
 SilverStripe\Admin\LeftAndMain:
     extra_requirements_css:
-        - '_resources/vendor/poptin/silverstripe/client/dist/css/menu-icon.css'
+        - '_resources/vendor/poptin/silverstripe-popups-forms/client/dist/css/menu-icon.css'

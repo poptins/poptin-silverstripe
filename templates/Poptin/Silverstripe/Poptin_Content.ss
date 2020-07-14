@@ -12,7 +12,7 @@
         <h1></h1>
         <div class="poptinWrap">
         <!-- Logo -->
-        <div class="poptinLogo"><img src="$resourceURL('poptin/silverstripe:client/dist/images/poptinlogo.png')"/></div>
+        <div class="poptinLogo"><img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/poptinlogo.png')"/></div>
 
         <% if $poptinidcheck %>
             <div class="poptinLogged" style="display:block">
@@ -21,7 +21,7 @@
         <% end_if %>
             <!-- Here will render after login/create account view -->
             <div class="poptinLoggedBg"
-                style="background:url($resourceURL('poptin/silverstripe:client/dist/images/loggedinbg.png')) no-repeat">
+                style="background:url($resourceURL('poptin/silverstripe-popups-forms:client/dist/images/loggedinbg.png')) no-repeat">
                 <form id="logmein_form" action="" method="POST">
                     <input type="hidden" name="action" value="poptin_logmein" class="poptin_input"/>
                     <input type="hidden" name="logmein" value="true" class="poptin_input"/>
@@ -31,7 +31,7 @@
                 <h2 class="loggedintitle">You're All Set!</h2>
                 <div class="tinyborder"></div>
                 <span class="everythinglooks"><strong>Poptin is installed on your website</strong><br>Click on the button below to<br>create and manage your poptins</span>
-                <img src="$resourceURL('poptin/silverstripe:client/dist/images/vicon.png')"/>
+                <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/vicon.png')"/>
                 <a href="/admin/poptin/redirectToDashboard" target="_blank"
                 class="ppcontrolpanel goto_dashboard_button_pp_updatable">Go to Dashboard</a>
                 <a href="#logout" class="pplogout">Deactivate Poptin</a>
@@ -49,7 +49,7 @@
             <div class="popotinRegister">
                 <!-- Here will render register view -->
                 <div class="accountWrapper"
-                    style="background:url($resourceURL('poptin/silverstripe:client/dist/images/accountboxsignup.png')) no-repeat">
+                    style="background:url($resourceURL('poptin/silverstripe-popups-forms:client/dist/images/accountboxsignup.png')) no-repeat">
                     <div class="poptinWrapInner">
                         <div class="topAccountBar sign_up_for_free_wrapper">
                             <span class="ppRegister active">Sign up for free</span>
@@ -79,7 +79,7 @@
             <div class="popotinLogin" style="display:none">
                 <!-- Here will render login view -->
                 <div class="accountWrapper"
-                    style="background:url($resourceURL('poptin/silverstripe:client/dist/images/accountbox.png')) no-repeat">
+                    style="background:url($resourceURL('poptin/silverstripe-popups-forms:client/dist/images/accountbox.png')) no-repeat">
                     <div class="poptinWrapInner">
                         <div class="topAccountBar poptin_login_wrapper">
                             <span class="ppLogin active">Enter your user ID</span><span
@@ -102,7 +102,7 @@
                 <h2 class="poptinTitle">Create your first poptin with ease</h2>
                 <div class="tinyborder"></div>
                 <div class="youtubeVideoContainer"
-                    style="background:url($resourceURL('poptin/silverstripe:client/dist/images/youtubeBackground.png')) no-repeat">
+                    style="background:url($resourceURL('poptin/silverstripe-popups-forms:client/dist/images/youtubeBackground.png')) no-repeat">
                     <div class="youtubeVideo">
                         <iframe width="905" height="509"
                                 src="https://www.youtube.com/embed/uvTw_mmA32Q?rel=0&amp;showinfo=0" frameborder="0"
@@ -117,8 +117,8 @@
                 <div class="innerContent">
                     <div class="box ">
                         <div class="boxIcon img-box">
-                            <img src="$resourceURL('poptin/silverstripe:client/dist/images/heart.png')"/>
-                            <img class="hover-img" src="$resourceURL('poptin/silverstripe:client/dist/images/heart-hover.png')"/>
+                            <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/heart.png')"/>
+                            <img class="hover-img" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/heart-hover.png')"/>
                         </div>
                         <div class="box-content">
                             <div class="boxTitle boxEnv">
@@ -129,8 +129,8 @@
                     </div>
                     <div class="box ">
                         <div class="boxIcon">
-                            <img src="$resourceURL('poptin/silverstripe:client/dist/images/envelope.png')"/>
-                            <img class="hover-img" src="$resourceURL('poptin/silverstripe:client/dist/images/envelope-hover.png')"/>
+                            <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/envelope.png')"/>
+                            <img class="hover-img" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/envelope-hover.png')"/>
                         </div>
                         <div class="box-content">
                             <div class="boxTitle boxLeads">Get more email subscribers</div>
@@ -139,8 +139,8 @@
                     </div>
                     <div class="box ">
                         <div class="boxIcon">
-                            <img src="$resourceURL('poptin/silverstripe:client/dist/images/leads-icon_new.png')"/>
-                            <img class="hover-img" src="$resourceURL('poptin/silverstripe:client/dist/images/leads-icon-hover_new.png')"/>
+                            <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/leads-icon_new.png')"/>
+                            <img class="hover-img" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/leads-icon-hover_new.png')"/>
                         </div>
                         <div class="box-content">
                             <div class="boxTitle boxCart">Capture more leads and sales</div>
@@ -149,8 +149,8 @@
                     </div>
                     <div class="box ">
                         <div class="boxIcon">
-                            <img src="$resourceURL('poptin/silverstripe:client/dist/images/cart-icon_new.png')"/>
-                            <img class="hover-img" src="$resourceURL('poptin/silverstripe:client/dist/images/car-hover-icon_new.png')"/>
+                            <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/cart-icon_new.png')"/>
+                            <img class="hover-img" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/car-hover-icon_new.png')"/>
                         </div>
                         <div class="box-content">
                             <div class="boxTitle boxHeart">
@@ -168,8 +168,8 @@
                 <div class="innerContent">
                     <div class="boxclient client1">
                         <div class="boxclientHead"
-                            style="background:url($resourceURL('poptin/silverstripe:client/dist/images/client1bg.png')) no-repeat">
-                            <img src="$resourceURL('poptin/silverstripe:client/dist/images/profile1.png')"/>
+                            style="background:url($resourceURL('poptin/silverstripe-popups-forms:client/dist/images/client1bg.png')) no-repeat">
+                            <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/profile1.png')"/>
                         </div>
                         <div class="clientboxtext">
                             <span class="clientName">Michael Kamleitner</span>
@@ -179,8 +179,8 @@
                     </div>
                     <div class="boxclient client2">
                         <div class="boxclientHead"
-                            style="background:url($resourceURL('poptin/silverstripe:client/dist/images/client2bg.png')) no-repeat">
-                            <img src="$resourceURL('poptin/silverstripe:client/dist/images/profile2.png')"/>
+                            style="background:url($resourceURL('poptin/silverstripe-popups-forms:client/dist/images/client2bg.png')) no-repeat">
+                            <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/profile2.png')"/>
                         </div>
                         <div class="clientboxtext">
                             <span class="clientName">Deepak Shukla</span>
@@ -190,8 +190,8 @@
                     </div>
                     <div class="boxclient client3">
                         <div class="boxclientHead"
-                            style="background:url($resourceURL('poptin/silverstripe:client/dist/images/client3bg.png')) no-repeat">
-                            <img src="$resourceURL('poptin/silverstripe:client/dist/images/profile3.png')"/>
+                            style="background:url($resourceURL('poptin/silverstripe-popups-forms:client/dist/images/client3bg.png')) no-repeat">
+                            <img src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/profile3.png')"/>
                         </div>
                         <div class="clientboxtext">
                             <span class="clientName">Michael Voiskoun</span>
@@ -210,15 +210,15 @@
                 jQuery(function ($) {
                     $(".parrot").hover(
                         function () {
-                            $(this).attr("src", "$resourceURL('poptin/silverstripe:client/dist/images/parrot.gif')");
+                            $(this).attr("src", "$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/parrot.gif')");
                         },
                         function () {
-                            $(this).attr("src", "$resourceURL('poptin/silverstripe:client/dist/images/parrot.png')");
+                            $(this).attr("src", "$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/parrot.png')");
                         }
                     );
                 });
             </script>
-            <img class="parrot" src="$resourceURL('poptin/silverstripe:client/dist/images/parrot.png')"/>
+            <img class="parrot" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/parrot.png')"/>
             <span class="poptinlove">Visit us at  <a
                         href="https://www.poptin.com/?utm_source=silverstripe"
                         target="_blank">poptin.com</a></span>
@@ -233,7 +233,7 @@
                 <div class="poptin-where-my-id-wrapper">
                     <div class="poptin-where-my-id-01">
                         <div class="poptin-where-my-id">
-                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-01.png')"/>
+                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/where-is-my-id-01.png')"/>
                         </div>
                         <div class="poptin-where-my-id-smalltext">
                             <b>1.</b>&nbsp;Go to your dashboard, in the top bar click on "Installation Code"
@@ -241,7 +241,7 @@
                     </div>
                     <div class="poptin-where-my-id-02">
                         <div class="poptin-where-my-id">
-                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-02.png')"/>
+                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/where-is-my-id-02.png')"/>
                         </div>
                         <div class="poptin-where-my-id-smalltext">
                             <b>2.</b>&nbsp;Click on Wordpress
@@ -249,7 +249,7 @@
                     </div>
                     <div class="poptin-where-my-id-03">
                         <div class="poptin-where-my-id">
-                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe:client/dist/images/where-is-my-id-03.png')"/>
+                            <img class="where-my-id-3-images" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/where-is-my-id-03.png')"/>
                         </div>
                         <div class="poptin-where-my-id-smalltext">
                             <b>3.</b>&nbsp;Copy your user ID
@@ -269,7 +269,7 @@
     <div id="byebyeModal" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
-                <img class="poptin-parrot-byebye-image" src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-bye-bye.png')"/>
+                <img class="poptin-parrot-byebye-image" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/parrot-bye-bye.png')"/>
                 <div class="poptin-lightbox-header-general">Bye Bye</div>
                 <div class="poptin-lightbox-textcontent-general">
                     Poptin snippet has been
@@ -288,7 +288,7 @@
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
                 <img class="poptin-parrot-makingsure-image"
-                    src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-making-sure.png')"/>
+                    src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/parrot-making-sure.png')"/>
                 <div class="poptin-lightbox-header-general">Just making sure</div>
                 <div class="poptin-lightbox-textcontent-general">
                     Are you sure you want to<br/> remove Poptin?
@@ -307,7 +307,7 @@
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
                 <img class="poptin-parrot-familiar-image"
-                    src="$resourceURL('poptin/silverstripe:client/dist/images/parrot-familiar.png')"/>
+                    src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/parrot-familiar.png')"/>
                 <div class="poptin-lightbox-header-general">You look familiar</div>
                 <div class="poptin-lightbox-textcontent-general">
                     You already have a Poptin<br/> account with this email address.
@@ -326,7 +326,7 @@
     <div id="oopsiewrongemailid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
-                <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
+                <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/new-poptin-parrot.png')"/>
                 <div class="poptin-lightbox-header-general">Oopsie... wrong Email</div>
                 <div class="poptin-lightbox-textcontent-general">
                     Please enter a valid Email Address.
@@ -343,7 +343,7 @@
     <div id="oopsiewrongid" class="modal fade" role="dialog" style="margin-top: 110px;direction: ltr; height: 400px;">
         <div class="modal-dialog poptin-lightbox-general">
             <div class="modal-content">
-                <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe:client/dist/images/new-poptin-parrot.png')"/>
+                <img class="poptin-parrot-oopsie-image" src="$resourceURL('poptin/silverstripe-popups-forms:client/dist/images/new-poptin-parrot.png')"/>
                 <div class="poptin-lightbox-header-general">Oopsie... wrong ID</div>
                 <div class="poptin-lightbox-textcontent-general">
                     <a href="#" class="poptin-lightbox-atag where-is-my-id-inside-lb">Where is my user ID?</a>

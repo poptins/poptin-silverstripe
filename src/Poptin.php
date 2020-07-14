@@ -16,11 +16,11 @@ class Poptin extends LeftAndMain
 
     public function init() {
         parent::init();
-        Requirements::css('poptin/silverstripe:client/dist/css/bootstrap.min.css');
-        Requirements::css('poptin/silverstripe:client/dist/css/poptin-admin.css');
+        Requirements::css('poptin/silverstripe-popups-forms:client/dist/css/bootstrap.min.css');
+        Requirements::css('poptin/silverstripe-popups-forms:client/dist/css/poptin-admin.css');
         Requirements::javascript('https://code.jquery.com/jquery-3.5.1.min.js');
-        Requirements::javascript('poptin/silverstripe:client/dist/js/bootstrap.min.js');
-        Requirements::javascript('poptin/silverstripe:client/dist/js/poptin-admin.js');
+        Requirements::javascript('poptin/silverstripe-popups-forms:client/dist/js/bootstrap.min.js');
+        Requirements::javascript('poptin/silverstripe-popups-forms:client/dist/js/poptin-admin.js');
     }
 
     public function csrf_token() {
