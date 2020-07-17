@@ -1,4 +1,5 @@
 <?php
+
 namespace Poptin\Silverstripe;
 
 use SilverStripe\Admin\LeftAndMain;
@@ -9,12 +10,13 @@ use SilverStripe\Security\Security;
 
 class Poptin extends LeftAndMain
 {
-    private static $allowed_actions = array ('setConfig', 'deleteConfig', 'redirectToDashboard');
+    private static $allowed_actions = array('setConfig', 'deleteConfig', 'redirectToDashboard');
     private static $menu_icon_class = "icon menu-icon poptin";
     private static $url_segment = "poptin";
     private static $menu_title = "Poptin";
 
-    public function init() {
+    public function init()
+    {
         parent::init();
         Requirements::css('poptin/silverstripe-popups-forms:client/dist/css/bootstrap.min.css');
         Requirements::css('poptin/silverstripe-popups-forms:client/dist/css/poptin-admin.css');
@@ -23,20 +25,23 @@ class Poptin extends LeftAndMain
         Requirements::javascript('poptin/silverstripe-popups-forms:client/dist/js/poptin-admin.js');
     }
 
-    public function csrf_token() {
+    public function csrf_token()
+    {
         return hash('sha512', 'poptin-fe-login');
     }
 
-    public function currentUserEmail() {
+    public function currentUserEmail()
+    {
         $member = Security::getCurrentUser();
         return $member->Email;
     }
 
-    public function poptinidcheck() {
+    public function poptinidcheck()
+    {
         $config = SiteConfig::current_site_config();
         $poptinConfig = json_decode($config->PoptinConfig, true);
 
-        if($poptinConfig['client_id']) {
+        if ($poptinConfig['client_id']) {
             return true;
         }
 
@@ -50,33 +55,33 @@ class Poptin extends LeftAndMain
         $body = $request->requestVars();
 
         $poptinConfig = json_decode($config->PoptinConfig, true);
-        
-        if(array_key_exists('client_id', $body)) {
+
+        if (array_key_exists('client_id', $body)) {
             $poptinConfig['client_id'] = $body['client_id'];
         }
 
-        if(array_key_exists('user_id', $body)) {
+        if (array_key_exists('user_id', $body)) {
             $poptinConfig['user_id'] = $body['user_id'];
         }
 
-        if(array_key_exists('token', $body)) {
+        if (array_key_exists('token', $body)) {
             $poptinConfig['token'] = $body['token'];
         }
 
         $config->PoptinConfig = json_encode($poptinConfig);
         $config->write();
-        
+
         return json_encode(['success' => true, 'config' => json_decode($config->PoptinConfig)]);
     }
 
     public function deleteConfig(HTTPRequest $request)
     {
         $config = SiteConfig::current_site_config();
-        
+
         $config->PoptinConfig = json_encode([
             'client_id' => '',
             'user_id' => '',
-            'token' => '' 
+            'token' => ''
         ]);
         $config->write();
 
@@ -86,7 +91,7 @@ class Poptin extends LeftAndMain
     public function redirectToDashboard()
     {
         $config = SiteConfig::current_site_config();
-        
+
         $poptinConfig = json_decode($config->PoptinConfig, true);
 
         $body = [
@@ -100,10 +105,10 @@ class Poptin extends LeftAndMain
                 "form_params" => ($body)
             ]);
 
-            if($response->getStatusCode() == 200) {
+            if ($response->getStatusCode() == 200) {
                 return $this->redirect(json_decode($response->getBody()->getContents())->login_url . '&utm_source=silverstripe');
             }
-        }catch (\Exception $e) {
+        } catch (\Exception $e) {
             return $this->redirect('https://app.popt.in');
         }
     }
