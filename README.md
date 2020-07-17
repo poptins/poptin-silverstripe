@@ -1,10 +1,4 @@
-[![Build Status](https://travis-ci.org/poptins/poptin-silverstripe-popups-forms.svg?branch=master)](https://travis-ci.org/poptins/poptin-silverstripe-popups-forms)
-
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/?branch=master)
-
-[![Build Status](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/badges/build.png?b=master)](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/build-status/master)
-
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![Build Status](https://travis-ci.org/poptins/poptin-silverstripe-popups-forms.svg?branch=master)](https://travis-ci.org/poptins/poptin-silverstripe-popups-forms) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/badges/build.png?b=master)](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/build-status/master) [![Code Intelligence Status](https://scrutinizer-ci.com/g/poptins/poptin-silverstripe-popups-forms/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
 **Poptin is a popup and contact form builder platform for your SilverStripe website that increases your website’s conversion rate. Get more sales, leads, and email subscribers!**
 
